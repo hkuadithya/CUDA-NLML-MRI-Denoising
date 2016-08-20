@@ -1,0 +1,31 @@
+
+1) 	First the Rician noise is added to the ground truth by using "addNoise.m".
+		noisy = addNoise(groundTruth, standardDeviation);
+		%	groundTruth: source image.
+		%	standardDeviation: std deviation of noise.
+		
+		Eg: noisy = addNoise(image, 15);
+		
+2) 	Next, the vector containing the set of non local neighbours for 
+	each and every voxel in the noisy image is computed through "NLMLgpu.m".
+		gpuArray = NLMLgpu( noisy, searchWinDim, localWinDim);
+		% noisy: noisy image
+		% searchWinDim: search window dimensions 
+		% localWinDim: local window dimensions
+		
+		Eg: gpuArray = NLMLgpu(noisy, 20, 3);
+				searchWinDim: 20x20x20
+				localWinDim: 3x3x3
+		
+		
+3) 	Denoised image is generated through "NLMLbuild.m".
+		denoised= NLMLbuild(noisy, gpuArray);
+		
+		% gpuArray is the vector containing the non local neighbours for every noisy image voxel
+		
+	
+REQUIREMENTS:
+	Cuda 5.5
+	MS visual studio 2010
+	Matlab 13a
+	

@@ -1,0 +1,21 @@
+BENCHMARK RESULTS FOR MEMORY TRANSFER OPERATIONS:
+
+
+
+tic; gpuArray = NLMLgpu(noisy, 10, 3); toc;
+
+1. Execution time: gpu mem allocation for output gpuArray 0.001536
+2. Execution time: gpu mem allocation for imageData on GPU memory 0.001472
+3. Execution time: ImageData transfer from RAM to GPU memory 9.717568
+4. Execution time: gpuArray transfer from GPU memory to RAM 377.671448
+Elapsed time is 92.964816 seconds.
+
+..........................................
+
+tic; gpuArray = NLMLgpu(noisy, 20, 3); toc;
+
+1. Execution time: gpu mem allocation for output gpuArray 0.001792
+2. Execution time: gpu mem allocation for imageData on GPU memory 0.001568
+3. Execution time: ImageData transfer from RAM to GPU memory 9.664096
+4. Execution time: gpuArray transfer from GPU memory to RAM 346.014954
+Elapsed time is 571.413851 seconds.
