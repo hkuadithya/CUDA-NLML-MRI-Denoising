@@ -1,6 +1,6 @@
 # GPU implementation of NLML MRI Denoising Algorithm
 
-This project describes the first successful GPU acceleration of [NLML(Non local maximum likelihood)](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4556617) MRI(Magnetic resonance Imaging) algorithm.<br/>
+This project describes the first successful GPU acceleration of [NLML(Non local maximum likelihood)](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4556617) MRI(Magnetic resonance Imaging) denoising algorithm.<br/>
 
 The results of these experiments were published in the [Springer Journal of Real-Time Image Processing](http://link.springer.com/article/10.1007/s11554-015-0559-6).<br/>
 
