@@ -1,4 +1,4 @@
-function [D1]=NLMLgpu(input, t, f) 
+function [D1]=NLMLcpu(input, t, f) 
 %***************************************************************************************************
  %Non local ML method for denoising single and multicoil MRI
  %Ref : J Rajan et. al.," Nonlocal maximum likelihood estimation method for denoising multiple-coil 
