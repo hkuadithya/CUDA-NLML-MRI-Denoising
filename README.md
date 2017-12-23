@@ -23,12 +23,12 @@ These instructions will help you get the project up and running in your local sy
 	- Change the compiler to Microsoft Visual studio 2010
 
 2. To generate the C++ mex file follow these steps: 
-	- Copy the file [diffneigh1_cpu.cpp](/Generate CPU Mex/diffneigh1_cpu.cpp) to any folder
+	- Copy the file [diffneigh1_cpu.cpp](Generate CPU Mex/diffneigh1_cpu.cpp) to any folder
 	- In matlab, change the directory to the diffneigh1_cpu.cpp folder's location and run 'mex diffneigh1_cpu.cpp'
 	- This will generate the diffneigh1_cpu.mexw64 MATLAB EXECUTABLE FILE
 	
 3. To generate the Cuda mex file follow these steps:
-	- Copy the file [diffneigh1.cu](/Generate GPU Mex/diffneigh1.cu) Cuda C file to any folder
+	- Copy the file [diffneigh1.cu](Generate GPU Mex/diffneigh1.cu) Cuda C file to any folder
 	- Copy these additional files into the target folder: Cuda.lib, Cudart.lib and mexopts.bat
 	- In matlab, change the directory to the diffneigh1.cu folder's location and run 'mex diffneigh1.cu'
 	- This will generate the diffneigh1.mexw64 MATLAB CUDA EXECUTABLE FILE
@@ -40,7 +40,7 @@ These instructions will help you get the project up and running in your local sy
 These instructions will help you to run the experiments in your system.
 
 1. First, load the source file [T1.mat](T1data.mat) in matlab
-2. Next introduce some Rician noise into the source image using the [addNoise.m](/GPU NLML/addNoise.m) file
+2. Next introduce some Rician noise into the source image using the [addNoise.m](GPU NLML/addNoise.m) file
 	```
 		%  	noisy = addNoise(groundTruth, standardDeviation);
 		%	groundTruth: source image.
@@ -48,9 +48,9 @@ These instructions will help you to run the experiments in your system.
 		
 		noisy = addNoise(image, 15);
 	```
-3. Switch your directory to [GPU NLML](/GPU NLML) and copy the generated diffneigh1_cpu.mexw64 and diffneigh1.mexw64 file into the directory
+3. Switch your directory to [GPU NLML](GPU NLML) and copy the generated diffneigh1_cpu.mexw64 and diffneigh1.mexw64 file into the directory
 
-4. Next, the vector containing the set of non local neighbours for each and every voxel in the noisy image is computed through [NLMLgpu.m](/GPU NLML/NLMLgpu.m)
+4. Next, the vector containing the set of non local neighbours for each and every voxel in the noisy image is computed through [NLMLgpu.m](GPU NLML/NLMLgpu.m)
 	- This generates the Lambda vector using GPU and Cuda Mex file.
 	```
 		%	gpuArray = NLMLgpu( noisy, searchWinDim, localWinDim);
@@ -64,7 +64,7 @@ These instructions will help you to run the experiments in your system.
 		tic; gpuArray = NLMLgpu(noisy, 20, 3); toc;
 	```
 
-5. Similar to step4, this step generates the CPU Lamda Vector [NLMLcpu.m](/GPU NLML/NLMLcpu.m)
+5. Similar to step4, this step generates the CPU Lamda Vector [NLMLcpu.m](GPU NLML/NLMLcpu.m)
 	- This generates the Lambda vector using CPU
 	```
 		%	cpuArray = NLMLcpu( noisy, searchWinDim, localWinDim);
@@ -78,7 +78,7 @@ These instructions will help you to run the experiments in your system.
 		tic; cpuArray = NLMLcpu(noisy, 20, 3); toc;
 	``` 	
 
-6. Finally the denoised image is generated for CPU and GPU generated Lambda Vectors using [NLMLbuild.m](/GPU NLML/NLMLbuild.m)
+6. Finally the denoised image is generated for CPU and GPU generated Lambda Vectors using [NLMLbuild.m](GPU NLML/NLMLbuild.m)
 	- This generates the final denoised image
 	```
 		%	cpuDenoised : denoised image generated for cpuArray
