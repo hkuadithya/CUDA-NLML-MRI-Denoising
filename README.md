@@ -6,6 +6,18 @@ The results of these experiments were published in the [Springer Journal of Real
 
 NVidia CUDA was used as the parallel processing framework to accelerate the algorithm performance.
 
+<figure>
+	<img src="NLML_denoising_example.png" width=500 align="middle"/>
+	<figcaption>
+		<ol type="A">
+			<li> Ground Truth</li>
+			<li> Image corrupted with Rician noise (&sigma; = 15)</li>
+			<li> CPU generated denoised image (PSNR = 29.98)</li>
+			<li> GPUgenerated denoised image (PSNR = 29.98)</li>
+		</ol>
+	</figcaption>
+</figure>
+
 ## Prerequisites
 
 1. NVidia Cuda enabled GPU (hardware requirement)
