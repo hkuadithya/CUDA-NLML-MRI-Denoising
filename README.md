@@ -13,7 +13,7 @@ NVidia CUDA was used as the parallel processing framework to accelerate the algo
 			<li> Ground Truth</li>
 			<li> Image corrupted with Rician noise (&sigma; = 15)</li>
 			<li> CPU generated denoised image (PSNR = 29.98)</li>
-			<li> GPUgenerated denoised image (PSNR = 29.98)</li>
+			<li> GPU generated denoised image (PSNR = 29.98)</li>
 		</ol>
 	</figcaption>
 </figure>
