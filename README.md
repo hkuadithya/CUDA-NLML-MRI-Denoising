@@ -10,7 +10,7 @@ NVidia CUDA was used as the parallel processing framework to accelerate the algo
 	<img src="NLML_denoising_example.png" width=500 align="middle"/>
 	<figcaption>
 		<ol type="A">
-			<li> Ground Truth</li>
+			<li> Ground Truth (60th slice of 3D MR image)</li>
 			<li> Image corrupted with Rician noise (&sigma; = 15)</li>
 			<li> CPU generated denoised image (PSNR = 29.98)</li>
 			<li> GPU generated denoised image (PSNR = 29.98)</li>
