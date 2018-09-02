@@ -40,9 +40,9 @@ __global__ void cudaLaunch(float* imData, float* output, int nSize, int searchSi
     }
 
     float diff, val, dist[25];
-    
+    // Find 25 closest neighbors. Initialize initial distances to INF.
     for (i = 0; i < 25; i++)
-        dist[i] = 9999999;
+        dist[i] = 1E+37; 
 
     for (z = minc[2]; z < maxc[2]; ++z) {
         for (y = minc[1]; y < maxc[1]; ++y) {
