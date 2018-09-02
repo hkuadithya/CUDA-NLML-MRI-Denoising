@@ -1,13 +1,10 @@
 function [output, smap]=NLMLbuild(input, D1) 
  
- [m, n, z]=size(input);						% x, y and z dimension of the input image.
- smap=zeros(m,n,z); 						% output image= zeroes in the three dimensions.
- %F = padarray(input,[f f f],'symmetric');	% symmetric padding across the three dimensions.
- output=zeros(m,n,z);
- options = optimset('Display','off', 'GradObj', 'on', 'LargeScale', 'off');
+[m, n, z]=size(input);						% x, y and z dimension of the input image.
+smap=zeros(m,n,z);
+output=zeros(m,n,z);
+options = optimset('Display','off', 'GradObj', 'on', 'LargeScale', 'off');
  
-%D1=diffneigh1(single(F), [t, t, t], [f, f, f]);
-
 
 for k=1:z  
     for j=1:n 
